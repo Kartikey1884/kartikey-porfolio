@@ -91,3 +91,34 @@
     grid-template-columns: 1fr;
   }
 }
+
+.projects__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.projects__filter {
+  padding: 9px 18px;
+
+  border: 1px solid #ddd;
+  border-radius: 20px;
+
+  background: white;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.projects__filter:hover {
+  transform: translateY(-2px);
+}
+
+.projects__filter--active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
