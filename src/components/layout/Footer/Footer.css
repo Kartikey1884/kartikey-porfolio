@@ -1,0 +1,48 @@
+.footer {
+  padding: 50px 20px 25px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__content {
+  margin-bottom: 30px;
+}
+
+.footer__name {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.footer__description {
+  margin: 0;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer__bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
