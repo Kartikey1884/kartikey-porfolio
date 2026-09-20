@@ -64,3 +64,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+@media (max-width: 768px) {
+  .skills__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__categories {
+    grid-template-columns: 1fr;
+  }
+}
