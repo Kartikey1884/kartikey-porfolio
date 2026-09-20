@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({
+   theme, 
+   onToggleTheme 
+  }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -31,6 +34,19 @@ function Navbar() {
         >
           Kartikey Rai
         </a>
+
+        <button
+          type="button"
+          className="navbar__theme-button"
+          onClick={onToggleTheme}
+          aria-label={
+            theme === "light"
+              ? "Switch to dark mode"
+              : "Switch to light mode"
+          }
+        >
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
 
         <button
           type="button"
