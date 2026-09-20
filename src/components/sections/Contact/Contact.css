@@ -15,6 +15,7 @@
   margin-bottom: 10px;
   font-size: 0.95rem;
   font-weight: 600;
+  color: var(--color-text-secondary);
 }
 
 .contact__title {
@@ -25,6 +26,7 @@
 .contact__description {
   max-width: 500px;
   line-height: 1.7;
+  color: var(--color-text-secondary);
 }
 
 .contact__details {
@@ -52,7 +54,9 @@
 .contact__field textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid #ccc;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   font: inherit;
   resize: vertical;
@@ -62,11 +66,13 @@
 .contact__field input:focus,
 .contact__field textarea:focus {
   outline: none;
-  border-color: #333;
+  border-color: var(--color-primary);
 }
 
 .contact__button {
   padding: 12px 20px;
+  background: var(--color-primary);
+  color: var(--color-primary-text);
   border: none;
   border-radius: 6px;
   cursor: pointer;

@@ -1,6 +1,6 @@
 .projects {
   padding: 100px 8%;
-  background: #f7f7f7;
+  background: var(--color-surface);
 }
 
 .projects__container {
@@ -11,7 +11,7 @@
 
 .projects__subtitle {
   text-align: center;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 8px;
 }
 
@@ -28,8 +28,8 @@
 }
 
 .project-card {
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 
   padding: 30px;
@@ -47,7 +47,7 @@
 }
 
 .project-card__description {
-  color: #555;
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -62,7 +62,9 @@
 .project-card__technology {
   padding: 6px 10px;
 
-  border: 1px solid #ddd;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
   border-radius: 15px;
 
   font-size: 13px;
@@ -105,10 +107,11 @@
 .projects__filter {
   padding: 9px 18px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 20px;
 
-  background: white;
+  background: var(--color-card-bg);
+  color: var(--color-text);
   cursor: pointer;
 
   transition: 0.2s ease;
@@ -119,9 +122,9 @@
 }
 
 .projects__filter--active {
-  background: #222;
-  color: white;
-  border-color: #222;
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  border-color: var(--color-primary);
 }
 
 @media (max-width: 768px) {

@@ -9,7 +9,7 @@
 
 .experience__subtitle {
   text-align: center;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 8px;
 }
 
@@ -27,7 +27,8 @@
 
 .experience-card {
   padding: 30px;
-  border: 1px solid #ddd;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
@@ -44,17 +45,17 @@
 }
 
 .experience-card__role {
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .experience-card__duration {
-  color: #666;
+  color: var(--color-text-secondary);
   white-space: nowrap;
 }
 
 .experience-card__description {
   line-height: 1.7;
-  color: #555;
+  color: var(--color-text-secondary);
   margin-bottom: 20px;
 }
 
@@ -66,7 +67,9 @@
 
 .experience-card__technology {
   padding: 6px 10px;
-  border: 1px solid #ddd;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
   border-radius: 15px;
   font-size: 13px;
 }
