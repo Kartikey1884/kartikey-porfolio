@@ -1,3 +1,15 @@
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   min-height: calc(100vh - 70px);
 
@@ -12,6 +24,7 @@
 
 .hero__content {
   max-width: 800px;
+  animation: heroFadeUp 0.8s ease-out both;
 }
 
 .hero__greeting {
@@ -71,4 +84,10 @@
 
 .hero__button:hover {
   transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__content {
+    animation: none;
+  }
 }

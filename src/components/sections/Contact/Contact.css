@@ -71,13 +71,23 @@
 
 .contact__button {
   padding: 12px 20px;
-  background: var(--color-primary);
-  color: var(--color-primary-text);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-small);
+
+  background: var(--color-primary);
+  color: var(--color-background);
+
   cursor: pointer;
   font: inherit;
   font-weight: 600;
+
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.contact__button:active {
+  transform: translateY(0);
 }
 
 .contact__status {

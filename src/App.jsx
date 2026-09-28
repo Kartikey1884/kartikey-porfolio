@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-import Navbar from "./components/layout/Navbar/Navbar";
+import Navbar from "./components/layout/navbar/navbar";
 import Footer from "./components/layout/Footer/Footer";
+import Reveal from "./components/layout/Reveal/Reveal";
 
-import Hero from "./components/sections/Hero/Hero";
+import Hero from "./components/sections/hero/hero";
 import About from "./components/sections/About/About";
 import Skills from "./components/sections/Skills/Skills";
 import Experience from "./components/sections/Experience/Experience";
@@ -33,17 +34,30 @@ function App() {
         theme={theme}
         onToggleTheme={toggleTheme}
       />
-
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
 
-      <Footer />
+        <Reveal>
+          <About />
+        </Reveal>
+
+        <Reveal>
+          <Skills />
+        </Reveal>
+
+        <Reveal>
+          <Experience />
+        </Reveal>
+
+        <Reveal>
+          <Projects />
+        </Reveal>
+
+        <Reveal>
+          <Contact />
+        </Reveal>
+      </main>
+    <Footer />
     </>
   );
 }
