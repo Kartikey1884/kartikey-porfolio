@@ -4,11 +4,16 @@ function ProjectCard({
   technologies,
   github,
   demo,
+  category,
 }) {
   return (
     <article className="project-card">
 
       <div className="project-card__content">
+
+        <p className="project-card__category">
+          {category}
+        </p>
 
         <h3 className="project-card__title">
           {title}
@@ -30,21 +35,25 @@ function ProjectCard({
         </div>
 
         <div className="project-card__links">
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          )}
 
-          <a
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </a>
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+            </a>
+          )}
         </div>
 
       </div>
