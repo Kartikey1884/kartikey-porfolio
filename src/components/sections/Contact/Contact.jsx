@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Contact.css";
+import profile from "../../../data/profile";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ function Contact() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus("Please fill in all fields.");
       return;
     }
@@ -41,10 +42,9 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact__container">
+        {/* Contact Information */}
         <div className="contact__info">
-          <p className="contact__subtitle">
-            Get in touch
-          </p>
+          <p className="contact__subtitle">Get in touch</p>
 
           <h2 className="contact__title">
             Let's Work Together
@@ -58,28 +58,57 @@ function Contact() {
           <div className="contact__details">
             <p>
               <strong>Email:</strong>{" "}
-              Kartikeyrai8400@gmail.com
-            </p>
-            <p>
-                <strong>Phone:</strong>{" "}
-                +91 8400064374
+              <a href={`mailto:${profile.email}`}>
+                {profile.email}
+              </a>
             </p>
 
             <p>
-              <strong>Location:</strong>{" "}
-              India
+              <strong>Phone:</strong>{" "}
+              +91 8400064374
             </p>
+
+            <p>
+              <strong>Location:</strong> India
+            </p>
+          </div>
+
+          {/* Social Links */}
+          <div className="contact__socials">
+            <a
+              href={`mailto:${profile.email}`}
+              className="contact__social-link"
+            >
+              Email
+            </a>
+
+            <a
+              href={profile.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__social-link"
+            >
+              GitHub
+            </a>
+
+            <a
+              href={profile.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__social-link"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 
+        {/* Contact Form */}
         <form
           className="contact__form"
           onSubmit={handleSubmit}
         >
           <div className="contact__field">
-            <label htmlFor="name">
-              Name
-            </label>
+            <label htmlFor="name">Name</label>
 
             <input
               id="name"
@@ -92,9 +121,7 @@ function Contact() {
           </div>
 
           <div className="contact__field">
-            <label htmlFor="email">
-              Email
-            </label>
+            <label htmlFor="email">Email</label>
 
             <input
               id="email"
@@ -107,9 +134,7 @@ function Contact() {
           </div>
 
           <div className="contact__field">
-            <label htmlFor="message">
-              Message
-            </label>
+            <label htmlFor="message">Message</label>
 
             <textarea
               id="message"
@@ -117,7 +142,7 @@ function Contact() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message..."
-              rows="6"
+              rows={6}
             />
           </div>
 

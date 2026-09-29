@@ -14,8 +14,8 @@ const projects = [
       "Docker",
       "AWS",
     ],
-    github: "#",
-    demo: "#",
+    github: "",
+    demo: "",
   },
 
   {

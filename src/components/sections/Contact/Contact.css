@@ -108,3 +108,29 @@
     font-size: 2rem;
   }
 }
+
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact__social-link {
+  padding: 8px 14px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.contact__social-link:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-surface);
+}

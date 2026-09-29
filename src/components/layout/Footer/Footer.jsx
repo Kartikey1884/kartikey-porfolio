@@ -1,4 +1,5 @@
 import "./Footer.css";
+import profile from "../../../data/profile";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,11 +9,11 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__content">
           <h2 className="footer__name">
-            Kartikey Rai
+            {profile.name}
           </h2>
 
           <p className="footer__description">
-            AI/ML Developer & Backend Engineer
+            {profile.role}
           </p>
         </div>
 
@@ -45,7 +46,27 @@ function Footer() {
             Contact
           </a>
         </div>
+        <div className="footer__socials">
+          <a
+            href={profile.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
 
+          <a
+            href={profile.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href={`mailto:${profile.email}`}>
+            Email
+          </a>
+        </div>
         <div className="footer__bottom">
           <p>
             © {currentYear} Kartikey Rai. All rights reserved.
