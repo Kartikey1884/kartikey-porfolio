@@ -21,24 +21,33 @@ function Contact() {
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      setStatus("Please fill in all fields.");
-      return;
-    }
-
-    console.log("Form submitted:", formData);
-
-    setStatus("Thanks! Your message has been received.");
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+  if (!formData.name.trim()) {
+    setStatus("Please enter your name.");
+    return;
   }
 
+  if (!formData.email.trim()) {
+    setStatus("Please enter your email.");
+    return;
+  }
+
+  if (!formData.message.trim()) {
+    setStatus("Please enter a message.");
+    return;
+  }
+
+  console.log("Form submitted:", formData);
+
+  setStatus("Thanks! Your message has been received.");
+
+  setFormData({
+    name: "",
+    email: "",
+    message: "",
+  });
+}
   return (
     <section id="contact" className="contact">
       <div className="contact__container">
@@ -117,6 +126,7 @@ function Contact() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
+              required
             />
           </div>
 
@@ -130,6 +140,7 @@ function Contact() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
+              required
             />
           </div>
 
@@ -143,6 +154,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Write your message..."
               rows={6}
+              required
             />
           </div>
 
