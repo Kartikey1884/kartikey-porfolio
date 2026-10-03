@@ -60,7 +60,8 @@ const skills = [
       "AWS S3",
       "RabbitMQ",
       "CI/CD",
-      "Linux",
+      "Git",
+      "GitHub Actions",
     ],
   },
 ];
