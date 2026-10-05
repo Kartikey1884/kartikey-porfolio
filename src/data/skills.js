@@ -62,6 +62,8 @@ const skills = [
       "CI/CD",
       "Git",
       "GitHub Actions",
+      "git & GitHub",
+      
     ],
   },
 ];
