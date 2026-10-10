@@ -60,10 +60,15 @@ const skills = [
       "AWS S3",
       "RabbitMQ",
       "CI/CD",
+<<<<<<< Updated upstream
       "Git",
       "GitHub Actions",
       "git & GitHub",
       
+=======
+      "Linux",
+      "git & GitHub",
+>>>>>>> Stashed changes
     ],
   },
 ];
