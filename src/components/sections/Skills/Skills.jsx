@@ -1,18 +1,16 @@
 import "./Skills.css";
 import skills from "../../../data/skills";
+import SectionHeading from "../../layout/sectionHeading/sectionHeading";
 
 function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="skills__container">
-
-        <p className="skills__subtitle">
-          What I work with
-        </p>
-
-        <h2 className="skills__title">
-          Skills
-        </h2>
+        <SectionHeading 
+          eyebrow="Skills"
+          title="What I work with"
+          description="I have experience in a variety of technologies and tools, ranging from AI/ML frameworks to backend development and cloud services."
+        />
 
         <div className="skills__categories">
           {skills.map((skill) => (

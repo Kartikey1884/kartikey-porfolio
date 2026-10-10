@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Contact.css";
 import profile from "../../../data/profile";
+import SectionHeading from "../../layout/sectionHeading/sectionHeading";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -53,16 +54,12 @@ function Contact() {
       <div className="contact__container">
         {/* Contact Information */}
         <div className="contact__info">
-          <p className="contact__subtitle">Get in touch</p>
-
-          <h2 className="contact__title">
-            Let's Work Together
-          </h2>
-
-          <p className="contact__description">
-            Have a project, opportunity, or idea you'd like
-            to discuss? Feel free to reach out.
-          </p>
+          <SectionHeading
+            align="left"
+            eyebrow="Contact"
+            title="Let's work together"
+            description="Have a project, opportunity, or technical problem you'd like to discuss? Send me a message."
+          />
 
           <div className="contact__details">
             <p>
