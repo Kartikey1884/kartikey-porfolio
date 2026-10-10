@@ -1,4 +1,4 @@
-import "./SectionHeading.css";
+import "./sectionHeading.css";
 
 function SectionHeading({ eyebrow, title, description, align = "center" }) {
   return (
