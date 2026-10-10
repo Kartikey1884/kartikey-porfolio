@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Projects.css";
 import projects from "../../../data/projects";
 import ProjectCard from "./ProjectCard";
+import SectionHeading from "../../layout/sectionHeading/sectionHeading";
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -23,14 +24,11 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="projects__container">
-
-        <p className="projects__subtitle">
-          What I've built
-        </p>
-
-        <h2 className="projects__title">
-          Projects
-        </h2>
+        <SectionHeading
+          eyebrow="Projects"
+          title="Things I've built"
+          description="A selection of projects covering AI/ML, backend engineering, and full-stack development."
+        />
 
         <div className="projects__filters">
           {categories.map((category) => (
@@ -56,7 +54,6 @@ function Projects() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );

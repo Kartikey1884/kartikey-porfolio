@@ -1,22 +1,15 @@
 import "./About.css";
+import SectionHeading from "../../layout/sectionHeading/sectionHeading";
 
 function About() {
   return (
     <section id="about" className="about">
       <div className="about__container">
-        <p className="about__subtitle">
-          Get to know me
-        </p>
-
-        <h2 className="about__title">
-          About Me
-        </h2>
-
-        <p className="about__description">
-          I'm an AI/ML Developer and Backend Engineer focused on
-          building AI-powered applications, LLM and RAG systems,
-          real-time voice solutions, and scalable backend services.
-        </p>
+        <SectionHeading 
+          eyebrow="About"
+          title="A little about me"
+          description="I’m an AI/ML developer and backend engineer interested in building practical AI systems, scalable APIs, and real-time applications."
+        />
 
         <div className="about__highlights">
           <div className="about__highlight">

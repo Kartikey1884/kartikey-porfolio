@@ -1,19 +1,17 @@
 import "./Experience.css";
 import experiences from "../../../data/experience";
 import ExperienceCard from "./ExperienceCard";
+import SectionHeading from "../../layout/sectionHeading/sectionHeading";
 
 function Experience() {
   return (
     <section id="experience" className="experience">
       <div className="experience__container">
-
-        <p className="experience__subtitle">
-          My professional journey
-        </p>
-
-        <h2 className="experience__title">
-          Experience
-        </h2>
+        <SectionHeading 
+          eyebrow="Experience"
+          title="Where I have worked"
+          description="I have a diverse background in software development, with experience in various roles and technologies."
+        />
 
         <div className="experience__list">
           {experiences.map((experience) => (
