@@ -35,33 +35,6 @@ function Navbar({
           Kartikey Rai
         </a>
 
-        <button
-          type="button"
-          className="navbar__theme-button"
-          onClick={onToggleTheme}
-          aria-label={
-            theme === "light"
-              ? "Switch to dark mode"
-              : "Switch to light mode"
-          }
-        >
-          {theme === "light" ? "🌙" : "☀️"}
-        </button>
-
-        <button
-          type="button"
-          className="navbar__menu-button"
-          onClick={toggleMenu}
-          aria-label={
-            isMenuOpen
-              ? "Close navigation menu"
-              : "Open navigation menu"
-          }
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </button>
-
         <nav
           className={
             isMenuOpen
@@ -81,6 +54,35 @@ function Navbar({
             </a>
           ))}
         </nav>
+
+        <div className="navbar__actions">
+          <button
+            type="button"
+            className="navbar__theme-button"
+            onClick={onToggleTheme}
+            aria-label={
+              theme === "light"
+                ? "Switch to dark mode"
+                : "Switch to light mode"
+            }
+          >
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
+
+          <button
+            type="button"
+            className="navbar__menu-button"
+            onClick={toggleMenu}
+            aria-label={
+              isMenuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
     </header>
   );
